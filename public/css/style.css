@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:ital,wght@0,200;1,800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Piazzolla', serif;
+    box-sizing: border-box;
+}
+:root{
+    --main-bg:#1e272e;
+    --main-color:#8097e6;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.row{
+    margin: 0;
+}
+.main_menu{
+    background-color: var(--main-bg);
+}
+.navbar{
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+.navbar li{
+    margin-left: 2rem;
+}
+.navbar a{
+    color: #fff;
+    font-size: 2rem;
+}
+.navbar a:hover{
+    color: var(--main-color);
+}
+.navbar-toggler{
+    background-color: grey;
+    color: #fff;
+}
+.fa-snowflake{
+    transition: all linear;
+    animation: rot 8s linear infinite;
+    color: var(--main-color);
+}
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(3600deg);
+    }
+}
+
+/* mainheader */
+.main_left{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_left p{
+    font-size: 3rem;
+}
+.main_left h1{
+    font-size: 4rem;
+    margin:1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+.main_left a{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.8rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+    outline: none;
+    color: #000;
+}
+.main_left a:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_right{
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.main_right img{
+    width: 90%;
+    height: 90%;
+    filter: drop-shadow(0 0.5rem 1rem rgba(0,0,0,0.3) );
+    
+}
+
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+}
+footer p{
+    margin: 0;
+    text-align: center;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 1.5rem;
+    line-height: 5rem;
+}
+
+
+
+
+@media (max-width:768px){
+    .main_left{
+        height: auto;
+        margin:5rem 0; 
+    }
+    .main_right{
+        height: auto;
+        margin-top:3rem;
+    }
+    .main_left p{
+        font-size: 2rem;
+    }
+    .main_left h1{
+        font-size: 3rem;
+        margin:1rem 0 4rem 0;
+        text-transform: capitalize;
+    }
+}
+
+.ims{
+    background-image: url("img/spiral_abstract_4k-3840x2160.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+
+
+*, *::before,*::after{
+    padding: 0;margin: 0;box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.mainlogo{
+    width: 100vw;
+    height: 80%;
+    background: #2C3A47;
+    display: grid;
+    place-items:center;
+}
+.mainlogo .logo{
+    width: 30rem;
+    height: 10rem;
+    border: .6rem solid #25CCF7;
+    border-radius: 50%;
+    position: relative;
+    animation: logo 2s linear infinite;
+    display: grid;
+    place-items:center;
+}
+@keyframes logo{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.logo::before{
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: .6rem solid #25CCF7;
+    border-radius: 50%;
+    position: absolute;
+    transform: rotate(60deg);
+}
+.logo::after{
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: .6rem solid #25CCF7;
+    border-radius: 50%;
+    transform: rotate(-60deg);
+    position: absolute;
+}
+.circle{
+    height: 4rem;
+    width: 4rem;
+    background: #25CCF7;
+    border-radius: 50%;
+}
